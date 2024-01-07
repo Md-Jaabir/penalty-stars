@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/game.css">
+  <script src="./js/ai.js"></script>
+  <script src="./js/data.js"></script>
+  <title>Penalty Stars</title>
+</head>
+<body>
+	<div class="game">
+	  <div class="ground">
+	    <img src="./assets/ground.png" alt="">
+	    <div class="scoreboard">
+	      <div class="row team-1">
+	        <img class="logo">
+	        <div class="scores">
+	          
+	        </div>
+	      </div>
+	      <div class="row team-2">
+	        <img class="logo">
+	        <div class="scores">
+	         
+	        </div>
+	      </div>
+	    </div>
+	    <div class="goalkeeper">
+	      <img>
+	    </div>
+	  <div class="result-text hide">
+	    GOAL!!!
+	  </div>
+		<div class="gloves">
+			<img src="./assets//gloves.png" alt="">
+		</div>
+	    <div class="ball">
+	      <img src="./assets/football.png" alt="">
+	    </div>
+	    <div class="striker">
+	      <img class="head" src="./assets/head.png" alt="">
+	      <img class="body" alt="">
+	      <img src="./assets/leg.png" alt="" class="leg leg-1">
+	      <img src="./assets/leg.png" alt="" class="leg leg-2">
+	      <div class="jersey-texts">
+	        <p class="name"></p>
+	        <p class="jersey-number"></p>
+	      </div>
+	    </div>
+	    <div class="direction-select hide">
+	      <img src="./assets/arrow.png" alt="" onclick="selectDirection('left')" class="left arrow">
+	      <img src="./assets/arrow.png" alt="" onclick="selectDirection('middle')" class="middle arrow">
+	      <img src="./assets/arrow.png" alt="" onclick="selectDirection('right')" class="right arrow">
+	    </div>
+	    <div class="power-meter hide">
+	      <div class="meter"><div class="progress"></div></div>
+	      <button class="btn power-meter-stat" onclick="progressStart()">Start</button>
+	    </div>
+	    <div class="gk-select hide">
+	      <img onclick="gkSelect('left')" src="./assets/arrow.png" alt="" class="arrw left">
+	      <img onclick="gkSelect('middle')" src="./assets/arrow.png" alt="" class="arrw middle">
+	      <img onclick="gkSelect('right')" src="./assets/arrow.png" alt="" class="arrw right">
+	    </div>
+	  </div>
+	</div>
+	<script src="./js/index.js"></script>
+</body>
+</html>

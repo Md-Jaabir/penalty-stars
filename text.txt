@@ -1,0 +1,15 @@
+Given a desired football team formation (e.g., 4-3-3), provide an array of objects representing the strongest XI for that team based on:
+
+Player names and jersey numbers: Include full names and assigned jersey numbers for each player.
+Optional jersey names: Include nicknames or shortened names used on jerseys, if available.
+FC 24 penalty ratings: Access and incorporate ethically sourced FC 24 penalty ratings for each player.
+Sorting and goalkeeper placement: Sort the array by penalty ratings (descending) and place the goalkeeper (identified by position) last.
+Additional Notes:
+
+Specify the context for the "strongest XI" (e.g., specific match, general World Cup consideration).
+Indicate preferred language for code examples (e.g., JavaScript, Python).
+Clarify desired formatting for the player objects (e.g., camelCase, snake_case).
+Example Usage:
+
+"I want the strongest Germany XI as a 4-3-3 for the World Cup 2022 in JavaScript, with player objects using snake_case formatting."
+

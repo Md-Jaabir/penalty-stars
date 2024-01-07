@@ -1,0 +1,303 @@
+.ground{
+  width:100% ;
+  overflow: hidden;
+}
+
+.ground img{
+  width: 100%;
+  height: 100%;
+}
+
+.goalkeeper{
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  
+}
+
+.goalkeeper img{
+  width: 100%;
+  height: 100%;
+  transition: opacity .6s linear;
+}
+
+
+.striker{
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  bottom: 5%;
+  left: 35%;
+  transform: translateX(-50%);
+}
+.striker .body{
+  width: 100%;
+  height: 100%;
+}
+
+.striker .head{
+  height: 20%;
+  width: 20%;
+  position: absolute;
+  left: 48%;
+  transform: translateX(-50%);
+  top: 21px;
+  z-index: -1;
+}
+
+.striker .leg{
+  height:41px;
+  width: 35px;
+  position: absolute;
+  bottom: 12px;
+  
+}
+
+.striker .leg-1{
+  left: 64px;
+  z-index: -1;
+}
+
+.striker .leg-2{
+  left:91px;
+  z-index: -1;
+  transform-origin: top;
+}
+
+.shoot-animation{
+  animation:shoot .5s linear;
+}
+
+@keyframes shoot{
+  50%{
+    transform: rotate(45deg);
+  }
+  
+  100%{
+    transform: rotate(-60deg);
+  }
+}
+
+.ball{
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 84%;
+  left: 41%;
+  transition:.7s ease-in;
+}
+
+.ball img{
+  height: 100%;
+  width: 100%; 
+  
+}
+
+.direction-select{
+  position: absolute;
+  top:72%;
+  left: 37%;
+  display: flex;  
+}
+
+.arrow.left,.arrow.middle,.arrow.right{
+  height: 55px;
+  width: 40px;
+  transform-origin: bottom;
+  position: absolute;
+}
+
+.arrow.left{
+  transform: rotate(-45deg);
+}
+
+.arrow.middle{
+  left: 20px;
+}
+
+.arrow.right{
+  transform: rotate(45deg);
+  left: 40px;
+}
+
+.power-meter{
+  position: absolute;
+  top: 85%;
+  left: 20%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items:center ;
+}
+
+.meter{
+  height: 10px;
+  width: 100%;
+  background: white;
+  border: 2px solid black;
+  display: flex;
+}
+
+.meter .progress{
+  height: 100%;
+  background: red;
+  
+}
+
+.btn{
+  padding: 10px 15px;
+  border: 2px solid black;
+  font-family: 'Games', sans-serif;
+  outline: none;
+}
+
+.progress-anim{
+  animation: progress-animation 1s linear;
+}
+
+@keyframes progress-animation{
+  0%{
+    width: 0%;
+  }
+  50%{
+    width: 50%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+.gk-select{
+  position: absolute;
+  top: 34.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+  
+}
+
+.gk-select .arrw{
+  height: 40px;
+  width: 30px;
+  transform-origin: bottom;
+}
+
+.arrw.left{
+  transform: rotate(-90deg);
+}
+
+.arrw.middle{
+  position: relative;
+  top: -30px;
+}
+
+.arrw.right{
+  transform: rotate(90deg);
+}
+
+.jersey-texts{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: absolute;
+  top: 47%;
+  left: 49%;
+  transform: translate(-50%,-50%);
+  align-items: center;
+}
+
+.jersey-texts .name{
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: bolder;
+  width: 35px;
+  overflow: hidden;
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
+.jersey-texts .jersey-number{
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Sans-Serif;
+}
+
+.gloves{
+  transform: translateX(-50%);
+  top: 38%;
+  left: 49%;
+  position: absolute;
+  transition: .5s linear;
+}
+
+.gloves img{
+  height: 35px;
+}
+
+.result-text{
+  position: absolute;
+  top: 55%;
+  left:50%;
+  transform: translateX(-50%);
+  font-size:50px;
+  color: red;
+  font-family: 'Games', sans-serif;
+  letter-spacing:5px;
+  animation: blink .7s linear infinite;
+}
+
+.scoreboard{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 10px;
+}
+
+.scoreboard .row{
+  display: flex;
+  gap: 25px;
+}
+
+.row .logo{
+  width: 30px;
+}
+
+.row .scores{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: 160px;
+}
+
+.scores .goal{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #79ef2df9;
+  border: 3px solid black;
+}
+
+.scores .save{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #f63636;
+  border: 3px solid black;
+}
+
+@keyframes blink{
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
